@@ -86,13 +86,14 @@ gem install
 
 - GitHub: [@lucy-sees](https://github.com/lucy-sees)
 - Twitter: [@lucy_w_mwangi](https://twitter.com/lucy_w_mwangi)
-- LinkedIn: [@Lucy (Wanjiru) Mwangi](gihttps://www.linkedin.com/in/lucy-wanjiru-mwangi)
+
+- LinkedIn: [@Lucy (Wanjiru) Mwangi](https://www.linkedin.com/in/lucy-wanjiru-mwangi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] ****
+- [ ] A beautiful UI
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +101,7 @@ gem install
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/lucy-sees/Libra/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
