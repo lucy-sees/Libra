@@ -9,6 +9,5 @@ class Rental
 
     @person = person
     person.rental << self
-    
   end
 end

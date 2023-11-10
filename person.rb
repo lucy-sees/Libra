@@ -22,7 +22,7 @@ class Person
 
   def add_rental(rental)
     @rental.push(rental)
-    rental.person = self 
+    rental.person = self
   end
 
   private
