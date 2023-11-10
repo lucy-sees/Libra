@@ -1,4 +1,4 @@
-require '.nameable'
+require './nameable'
 require './capitalize_decorator'
 require './trimmer_decorator'
 require './rental'
@@ -21,6 +21,10 @@ class Person < Nameable
     of_age? || @parent_permission
   end
 
+  def correct_name
+    @name
+  end
+
   def add_rental(rental)
     @rental.push(rental)
     rental.person = self
@@ -32,7 +36,7 @@ class Person < Nameable
   private
 
   def of_age?
-    @age && @age >= 18
+    @age >= 18
   end
 end
 
