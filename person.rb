@@ -1,17 +1,28 @@
-require './book'
+require '.nameable'
+require './capitalize_decorator'
+require './trimmer_decorator'
+require './rental'
 
 class Person
+  attr_reader :id
+  attr_accessor :age, :name, :rental
+
   def initialize(age, name = 'Unknown', parent_permission: true)
     @id = Random.rand(1..1000)
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @rental = []
+    super()
   end
-  attr_accessor :name, :age
-  attr_reader :id
 
   def can_use_services?
     of_age? || @parent_permission
+  end
+
+  def add_rental(rental)
+    @rental.push(rental)
+    rental.person = self 
   end
 
   private
