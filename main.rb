@@ -32,7 +32,7 @@ end
 
 def main
   @app = App.new
-  $stdout.clear_screen
+
   puts 'Welcome to School Library App!'
   loop do
     show_menu
