@@ -20,6 +20,10 @@ class Person < Nameable
     of_age? || @parent_permission
   end
 
+  def correct_name
+    @name
+  end
+
   def add_rental(rental)
     @rental.push(rental)
     rental.person = self
