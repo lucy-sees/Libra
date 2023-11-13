@@ -4,7 +4,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -41,12 +40,6 @@ And all of this will be built in a beautiful and well-organized way!
 - **Add new students or teachers**
 - **Add new books**
 - **Save records of who borrowed a given book and when**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Not deployed yet...]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
