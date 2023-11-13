@@ -19,23 +19,23 @@ def display_options
   puts '7 - Exit'
 end
 
-def execute_option(app, number)
-  option_methods = {
-    1 => :list_books,
-    2 => :list_persons,
-    3 => :create_person_option,
-    4 => :create_book_option,
-    5 => :create_rental,
-    6 => :get_rental_option,
-    7 => :exit_app
-  }
-
-  if option_methods.key?(number)
-    send(option_methods[number], app)
+def execute_option(number)
+  case number
+  when 1 then list_books
+  when 2 then list_persons
+  when 3 then create_person_option
+  when 4 then create_book_option
+  when 5 then create_rental
+  when 6 then access_rental
+  when 7 then exit_app
   else
-    puts 'Enter valid number'
-    main(app)
+    handle_invalid_option
+    main
   end
+end
+
+def handle_invalid_option
+  puts 'Invalid option. Please try again'
 end
 
 def exit_app(*)
