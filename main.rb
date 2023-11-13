@@ -31,14 +31,20 @@ class LibraryApp
   end
 
   def execute_option(number)
-    case number
-    when 1 then list_books
-    when 2 then list_persons
-    when 3 then create_person_option
-    when 4 then create_book_option
-    when 5 then create_rental
-    when 6 then access_rental
-    when 7 then exit_app
+    option_mapping = {
+      1 => :list_books,
+      2 => :list_persons,
+      3 => :create_person_option,
+      4 => :create_book_option,
+      5 => :create_rental,
+      6 => :access_rental,
+      7 => :exit_app
+    }
+
+    selected_option = option_mapping[number]
+
+    if selected_option
+      send(selected_option)
     else
       handle_invalid_option
       main_menu
