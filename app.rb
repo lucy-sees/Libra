@@ -4,6 +4,7 @@ require './teacher'
 require './classroom'
 require './rental'
 require './book'
+require './file_manager'
 
 class App
   def initialize()
@@ -77,6 +78,7 @@ class App
       person_type = person.instance_of?(Student) ? 'Student' : 'Teacher'
       puts "#{index})[#{person_type}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
+
     person_index = gets.chomp.to_i
     print 'Date: '
     date = gets.chomp
@@ -89,6 +91,24 @@ class App
     puts 'Rentals:'
     person.rentals.each do |rental|
       puts "Date: #{rental.date}, Book: \"#{rental.book.title}\" by #{rental.book.author}"
+    end
+  end
+
+  def save_data_to_file
+    FileManager.books_to_file(@all_books)
+    FileManager.people_to_file(@all_persons)
+    rentals = @all_persons.map(&:rentals).flatten
+    FileManager.rentals_to_file(rentals)
+  end
+
+  def load_state
+    FileManager.books_from_file(@all_books)
+    FileManager.people_from_file(@all_persons)
+    rentals = []
+    FileManager.rentals_from_file(rentals, @all_books, @all_persons)
+    rentals.each do |rental|
+      person = @all_persons.find { |person| person.id == rental.person.id }
+      person.rentals << rental if person
     end
   end
 end

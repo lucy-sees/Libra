@@ -1,4 +1,6 @@
 require './app'
+require './display_options'
+require './execute_options'
 
 class LibraryApp
   def initialize
@@ -16,43 +18,6 @@ class LibraryApp
     display_options
     number = gets.chomp.to_i
     execute_option(number)
-  end
-
-  def display_options
-    puts
-    puts 'Please choose an option by entering a number:'
-    puts '1 - List all books'
-    puts '2 - List all people'
-    puts '3 - Create a person'
-    puts '4 - Create a book'
-    puts '5 - Create a rental'
-    puts '6 - List all rentals for a given person id'
-    puts '7 - Exit'
-  end
-
-  def execute_option(number)
-    option_mapping = {
-      1 => :list_books,
-      2 => :list_persons,
-      3 => :create_person_option,
-      4 => :create_book_option,
-      5 => :create_rental,
-      6 => :access_rental,
-      7 => :exit_app
-    }
-
-    selected_option = option_mapping[number]
-
-    if selected_option
-      send(selected_option)
-    else
-      handle_invalid_option
-      main_menu
-    end
-  end
-
-  def handle_invalid_option
-    puts 'Invalid option. Please try again'
   end
 
   def exit_app
