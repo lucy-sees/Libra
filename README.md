@@ -40,6 +40,11 @@ And all of this will be built in a beautiful and well-organized way!
 - **Add new students or teachers**
 - **Add new books**
 - **Save records of who borrowed a given book and when**
+- **Store data in JSON**
+
+### Upcoming Features <a name="Upcoming-features"></a>
+
+- **Unit Tests**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
