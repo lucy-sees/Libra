@@ -61,16 +61,50 @@ class App
 
   def create_rental
     puts 'Select a book from the following list by number'
-    @books.each_with_index { |book, index| puts "#{index}) Title: \"#{book.title}\", Author: #{book.author}" }
-    book_id = gets.chomp.to_i
+    display_books
+    book_id = select_book_id
+  
     puts 'Select a person from the following list by number (not id)'
+    display_people
+    person_id = select_person_id
+  
+    print 'Date: '
+    date = gets.chomp.to_s
+  
+    create_new_rental(date, person_id, book_id)
+  end
+  
+  def display_books
+    @books.each_with_index do |book, index|
+      puts "#{index}) Title: \"#{book.title}\", Author: #{book.author}"
+    end
+  end
+  
+  def select_book_id
+    book_id = gets.chomp.to_i
+    validate_input(book_id, @books.length)
+  end
+  
+  def display_people
     @people.each_with_index do |person, index|
       puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
+  end
+  
+  def select_person_id
     person_id = gets.chomp.to_i
-    print 'Date: '
-    date = gets.chomp.to_s
-
+    validate_input(person_id, @people.length)
+  end
+  
+  def validate_input(input, max_length)
+    until input.between?(0, max_length - 1)
+      puts 'Invalid input. Please select a valid number.'
+      input = gets.chomp.to_i
+    end
+    input
+  end
+  
+  def create_new_rental(date, person_id, book_id)
     rental = Rental.new(date, @people[person_id], @books[book_id])
     @rentals << rental
     puts 'Rental created successfully'
