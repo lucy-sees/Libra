@@ -1,6 +1,13 @@
 require 'json'
 
 class FileManager
+  def self.check_if_file_exists(file_name)
+    return if File.exist?(file_name)
+
+    File.new(file_name, 'w')
+    File.write(file_name, '[]')
+  end
+
   def self.books_to_file(books)
     book_obj = books.map do |book|
       { title: book.title, author: book.author }
@@ -9,7 +16,9 @@ class FileManager
   end
 
   def self.books_from_file(books)
-    file = File.read('./data_files/books.json')
+    file_name = './data_files/books.json'
+    check_if_file_exists(file_name)
+    file = File.read(file_name)
     read_books = JSON.parse(file)
     read_books.each do |book|
       books << Book.new(book['title'], book['author'])
@@ -42,7 +51,9 @@ class FileManager
   end
 
   def self.people_from_file(people)
-    file = File.read('./data_files/people.json')
+    file_name = './data_files/people.json'
+    check_if_file_exists(file_name)
+    file = File.read(file_name)
     read_people = JSON.parse(file)
     read_people.each do |person|
       temp = if person['classname'] == 'Student'
@@ -56,29 +67,24 @@ class FileManager
     end
   end
 
-  def self.rentals_to_file(rentals)
-    rentals_json = rentals.map do |rental|
-      {
-        'date' => rental.date,
-        'book_id' => rental.book.id,
-        'person_id' => rental.person.id
-      }
-    end.to_json
-
-    File.write('rentals.json', rentals_json)
+  def self.rentals_to_file(rentals = [])
+    rentals_obj = rentals.map do |rental|
+      { date: rental.date,
+        book: { title: rental.book.title, author: rental.book.author },
+        person: { id: rental.person.id } }
+    end
+    File.write('./data_files/rentals.json', rentals_obj.to_json)
   end
 
   def self.rentals_from_file(rentals, books, people)
-    return unless File.exist?('rentals.json')
-
-    rentals_json = JSON.parse(File.read('rentals.json'))
-
-    rentals_json.each do |rental_json|
-      date = rental_json['date']
-      book = books.find { |book| book.id == rental_json['book_id'] }
-      person = people.find { |person| person.id == rental_json['person_id'] }
-
-      rentals << Rental.new(date, book, person) if book && person
+    file_name = './data_files/rentals.json'
+    check_if_file_exists(file_name)
+    file = File.read(file_name)
+    read_rentals = JSON.parse(file)
+    read_rentals.each do |rental|
+      book = books.find { |b| b.title == rental['book']['title'] }
+      person = people.find { |per| per.id = rental['person']['id'] }
+      rentals << person.add_rental(book, rental['date'])
     end
   end
 end
