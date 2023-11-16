@@ -8,6 +8,7 @@ def main
   $stdout.clear_screen
   @app.load_state
   puts "\e[1m\e[36mWelcome to School Library App!\e[0m"
+end
   loop do
     show_menu
     user_input = gets.chomp.to_i

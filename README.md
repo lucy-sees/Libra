@@ -37,8 +37,10 @@ And all of this will be built in a beautiful and well-organized way!
 
 ### Key Features <a name="key-features"></a>
 
-- **Add new students or teachers**
+- **Add new students**
+- **Add new teachers**
 - **Add new books**
+- **Add new rental**
 - **Save records of who borrowed a given book and when**
 - **Store data in JSON**
 
