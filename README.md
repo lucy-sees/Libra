@@ -37,9 +37,16 @@ And all of this will be built in a beautiful and well-organized way!
 
 ### Key Features <a name="key-features"></a>
 
-- **Add new students or teachers**
+- **Add new students**
+- **Add new teachers**
 - **Add new books**
+- **Add new rental**
 - **Save records of who borrowed a given book and when**
+- **Store data in JSON**
+
+### Upcoming Features <a name="Upcoming-features"></a>
+
+- **Unit Tests**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,6 +125,6 @@ If you like this project, please consider giving it a star.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE/MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
