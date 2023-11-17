@@ -86,7 +86,6 @@ gem install
 
 - GitHub: [@lucy-sees](https://github.com/lucy-sees)
 - Twitter: [@lucy_w_mwangi](https://twitter.com/lucy_w_mwangi)
-
 - LinkedIn: [@Lucy (Wanjiru) Mwangi](https://www.linkedin.com/in/lucy-wanjiru-mwangi)
 
 👤 **Abu Talha**
