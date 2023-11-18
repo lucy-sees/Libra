@@ -91,7 +91,7 @@ gem install
 👤 **Abu Talha**
 
 - GitHub: [@Abu Talha](https://github.com/abutalha3)
-- Twitter: [@Abu Tallha](https://twitter.com/)
+- Twitter: [@Abu Tallha](https://twitter.com/AbuTalha8T)
 
 <-- LinkedIn: has been blocked due to some issue-->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
