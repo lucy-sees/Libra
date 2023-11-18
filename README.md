@@ -86,15 +86,14 @@ gem install
 
 - GitHub: [@lucy-sees](https://github.com/lucy-sees)
 - Twitter: [@lucy_w_mwangi](https://twitter.com/lucy_w_mwangi)
-
 - LinkedIn: [@Lucy (Wanjiru) Mwangi](https://www.linkedin.com/in/lucy-wanjiru-mwangi)
 
 👤 **Abu Talha**
 
 - GitHub: [@Abu Talha](https://github.com/abutalha3)
-- Twitter: [@Abu Tallha](https://twitter.com/)
-- LinkedIn: [@Abu Talha](https://www.linkedin.com/in/)
+- Twitter: [@Abu Tallha](https://twitter.com/AbuTalha8T)
 
+<-- LinkedIn: has been blocked due to some issue-->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
