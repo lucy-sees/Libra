@@ -1,12 +1,11 @@
 require_relative '../person'
 require_relative '../book'
-​
+
 describe Rental do
   before(:each) do
     @person = Person.new(age: 18, name: 'Sophia')
     @book = Book.new('book', 'bill')
   end
-  ​
 
   context 'when testing the rental class' do
     it 'Create rental with both person & book' do
