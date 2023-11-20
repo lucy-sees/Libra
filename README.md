@@ -92,8 +92,8 @@ gem install
 
 - GitHub: [@Abu Talha](https://github.com/abutalha3)
 - Twitter: [@Abu Tallha](https://twitter.com/AbuTalha8T)
+- LinkedIn: [@Abu Talha](https://www.linkedin.com/in/abu-talha-najeeb-akhun-393b8b292/)
 
-<-- LinkedIn: has been blocked due to some issue-->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
